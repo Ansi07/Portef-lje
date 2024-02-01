@@ -1,0 +1,132 @@
+    *{
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    .container{
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header header header"
+        "main sidebar sidebar"
+        "main sidebar sidebar";
+        background-color: black;
+        padding: 2rem; 
+    }
+    
+    .om-header{
+        grid-area: header; 
+
+    }
+
+    .om-header #about{
+        color: yellow;
+    }
+
+    .om-header .Linklist{
+        display: flex;
+        list-style: none;
+        align-items: center; 
+        justify-content: space-around;
+    }
+
+
+    .om-header .Linklist li{
+        display: flex;
+        margin-left: 20px; 
+        margin-right: 20px;   
+              
+    }
+
+    .Linklist li a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+    }
+
+    .om-header #logoLink #logo{     
+        display: flex;
+        width: 6rem;
+        height: auto;
+        position: relative;        
+
+    }
+
+    .main{
+        grid-area: main;
+    }
+
+    .main p{
+        color: #fff;
+        font-size: 20px;
+        padding: 3rem 2rem 1rem;
+    }
+
+    .sidebar{
+        grid-area: sidebar;        
+    }
+
+    
+    .sidebar #bilde{
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+        width: 34rem;
+        height: auto;
+    }
+
+
+
+
+ 
+@media only screen and (max-width: 430px) {
+    
+    .container{     
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header"
+        "main"
+        "sidebar";
+        }
+
+
+    .om-header{
+        grid-area: header;
+    }
+    .om-header .Linklist{
+        display: flex;
+        justify-content:center;
+    }
+    .om-header .Linklist a{
+        font-size: 14px;
+    }
+
+    .main{
+        grid-area: main;
+    }
+
+    .sidebar{
+        grid-area: sidebar;
+    }
+
+    h1{
+        order: 3;
+        font-size: 35px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
