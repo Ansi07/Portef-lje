@@ -2,7 +2,8 @@
     background-color: #403F3F;
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .container{
@@ -43,8 +44,7 @@
 .jobb-header #logoLink #logo{     
     display: flex;
     width: 6rem;
-    height: auto;
-    position: relative;      
+    height: auto;    
     padding-left: 1px;  
 }
 
@@ -78,7 +78,6 @@ img{
     text-align: left;
 }
 .bilde1{
-    height: auto;
     display: flex;
     flex-direction: column;
     
@@ -88,97 +87,79 @@ img{
     flex-direction: column;
 }
 
-/*
 
-.bilde1{
-    color: white;
-}
-
-.bilde1 #img1{
-    width: 300px;
-    height: auto;
-    grid-area: img1;
-    display: flex;
-    
-}
-
-.bilde1 #img2{
-    width: 300px;
-    height: auto;
-    grid-area: img2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.bilde2 #img3{
-    width: 300px;
-    height: auto;
-    grid-area: img3;
-}
-
-.bilde2 #img4{
-    grid-area: img4;
-}
-
-/* 
+ 
 @media only screen and (max-width: 430px) {
-
-.container{     
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "header"
-    "main"
-    "sidebar";
+    *{
+        overflow-y: visible;
+    }
+    
+    .container{
+        width: 100%;
+        padding-top: 2rem;
+    }
+    
+    .jobb-header #work{
+        color: yellow;
+    
+    }
+    
+    .jobb-header .Linklist{
+        display: flex;
+        list-style: none;
+        align-items: center; 
+        justify-content: center;
+    }
+    
+    .Linklist li a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 13px;
+    }
+    
+    
+    .bodyContainer{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "main main"
+        "bilde1 bilde1"
+        "bilde2 bilde2";
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
     }
 
-
-header{
-    order: 1;
-    position: relative;
-    right: 530px;
-    bottom: 0px;
+    
+    img{
+        width: 300px;
+        height: 150px;
+    }
+    
+    .main {
+        grid-area: main;
+        width: 400px;
+        height: auto;
+        font-size: 18px;
+        text-align: center;
+        padding-top: 30px;
+    }
+    .bilde1{
+        grid-area: bilde1;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .bilde2{
+        grid-area: bilde2;
+        display: flex;
+        flex-direction: column;
+    }
 }
-.main{
-    grid-area: main;
-    order: 2;
-    position: relative;
-    left: 10px;
-    bottom: 100px;
-    font-size: 20px;
-}
-
-.sidebar{
-    grid-area: sidebar;
-    position: relative;
-    right: 730px;
-    top: 156px;
-}
-
-h1{
-    order: 3;
-    font-size: 35px;
-}
-
-#work{
-    order: 3;
-    position: relative;
-    left: 550px;
-}
-
-#about{
-    order: 4;
-    position: relative;
-    left: 650px;
-}
-#contact{
-    order: 5;
-    position: relative;
-    left: 750px;
-}
-}
-*/
 
 
 

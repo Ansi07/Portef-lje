@@ -103,7 +103,7 @@
         justify-content:center;
     }
     .om-header .Linklist a{
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .main{
@@ -115,7 +115,6 @@
     }
 
     h1{
-        order: 3;
         font-size: 35px;
     }
 
