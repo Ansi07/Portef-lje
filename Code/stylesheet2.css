@@ -1,129 +1,119 @@
-    *{
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
-    
-    .container{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
+/* Nullstiller margin, padding og skjuler overflow for alle elementer på siden */
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Styling for hovedcontaineren med grid*/
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
         "header header header"
         "main sidebar sidebar"
         "main sidebar sidebar";
-        background-color: black;
-        padding: 2rem; 
-    }
-    
-    .om-header{
-        grid-area: header; 
+    background-color: black;
+    padding: 2rem; 
+}
 
-    }
+/* Styling for header-seksjonen på "om"-siden */
+.om-header {
+    grid-area: header; 
+}
 
-    .om-header #about{
-        color: yellow;
-    }
+/* Styling for lenken "About" i header-seksjonen */
+.om-header #about {
+    color: yellow;
+}
 
-    .om-header .Linklist{
-        display: flex;
-        list-style: none;
-        align-items: center; 
-        justify-content: space-around;
-    }
+/* Styling for lenkelisten i header-seksjonen med flex*/
+.om-header .Linklist {
+    display: flex;
+    list-style: none;
+    align-items: center; 
+    justify-content: space-around;
+}
 
+/* Styling for hvert element i lenkelisten i header-seksjonen med flex*/
+.om-header .Linklist li {
+    display: flex;
+    margin-left: 20px; 
+    margin-right: 20px;   
+}
 
-    .om-header .Linklist li{
-        display: flex;
-        margin-left: 20px; 
-        margin-right: 20px;   
-              
-    }
+/* Styling for lenkene i lenkelisten */
+.Linklist li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
 
-    .Linklist li a{
-        text-decoration: none;
-        color: #fff;
-        font-size: 18px;
-    }
+/* Styling for logoet i header-seksjonen med flex */
+.om-header #logoLink #logo {     
+    display: flex;
+    width: 6rem;
+    height: auto;        
+}
 
-    .om-header #logoLink #logo{     
-        display: flex;
-        width: 6rem;
-        height: auto;
-        position: relative;        
+/* Styling for hovedseksjonen */
+.main {
+    grid-area: main;
+}
 
-    }
+/* Styling for teksten i hovedseksjonen */
+.main p {
+    color: #fff;
+    font-size: 20px;
+    padding: 3rem 2rem 1rem;
+}
 
-    .main{
-        grid-area: main;
-    }
+/* Styling for sidebar-seksjonen */
+.sidebar {
+    grid-area: sidebar;        
+}
 
-    .main p{
-        color: #fff;
-        font-size: 20px;
-        padding: 3rem 2rem 1rem;
-    }
+/* Styling for bilde i sidebar-seksjonen med flex */
+.sidebar #bilde {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    width: 34rem;
+    height: auto;
+}
 
-    .sidebar{
-        grid-area: sidebar;        
-    }
-
-    
-    .sidebar #bilde{
-        display: flex;
-        margin-left: auto;
-        align-items: center;
-        width: 34rem;
-        height: auto;
-    }
-
-
-
-
- 
+/* Styling for mobilview */
 @media only screen and (max-width: 430px) {
     
-    .container{     
+    /* Oppdatering av grid for mindre skjermer */
+    .container {     
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas: 
-        "header"
-        "main"
-        "sidebar";
-        }
+            "header"
+            "main"
+            "sidebar";
+    }
 
-
-    .om-header{
+    /* Justering av header-seksjonen for mindre skjermer */
+    .om-header {
         grid-area: header;
     }
-    .om-header .Linklist{
+
+    /* Justering av lenkelisten i header-seksjonen for mindre skjermer */
+    .om-header .Linklist {
         display: flex;
-        justify-content:center;
+        justify-content: center;
     }
-    .om-header .Linklist a{
+
+    /* Justering av fontstørrelse for lenkene på mindre skjermer */
+    .om-header .Linklist a {
         font-size: 13px;
     }
 
-    .main{
-        grid-area: main;
-    }
-
-    .sidebar{
-        grid-area: sidebar;
-    }
-
-    h1{
+    /* Justering av fontstørrelse for overskriftene på mindre skjermer */
+    h1 {
         font-size: 35px;
     }
-
 }
-
-
-
-
-
-
-
-
-
-

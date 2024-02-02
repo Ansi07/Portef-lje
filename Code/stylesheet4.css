@@ -1,4 +1,5 @@
-*{
+/* Nullstiller bakgrunnsfarge, padding, margin, og skjuler overflow for alle elementer på siden */
+* {
     background-color: #403F3F;
     padding: 0;
     margin: 0;
@@ -6,51 +7,56 @@
     overflow-x: hidden;
 }
 
-.container{
+/* Styling for hovedcontaineren */
+.container {
     width: 100%;
     padding-top: 2rem;
 }
 
-.jobb-header{
+/* Styling for header-seksjonen på "jobb"-siden */
+.jobb-header {
     grid-area: header; 
     padding-left: 31px;
     padding-right: 32px;
 }
-.jobb-header #work{
-    color: yellow;
 
+/* Styling for lenken "Work" i header-seksjonen */
+.jobb-header #work {
+    color: yellow;
 }
 
-.jobb-header .Linklist{
+/* Styling for lenkelisten i header-seksjonen med flex*/
+.jobb-header .Linklist {
     display: flex;
     list-style: none;
     align-items: center; 
     justify-content: space-around;
 }
 
-
-.jobb-header .Linklist li{
+/* Styling for hvert element i lenkelisten i header-seksjonen med flex */
+.jobb-header .Linklist li {
     display: flex;
     margin-left: 20px; 
     margin-right: 20px;   
 }
 
-.Linklist li a{
+/* Styling for lenkene i lenkelisten */
+.Linklist li a {
     text-decoration: none;
     color: #fff;
     font-size: 18px;
 }
 
-.jobb-header #logoLink #logo{     
+/* Styling for logoet i header-seksjonen med flex */
+.jobb-header #logoLink #logo {     
     display: flex;
     width: 6rem;
     height: auto;    
     padding-left: 1px;  
 }
 
-
-
-.bodyContainer{
+/* Styling for hovedcontaineren til body-seksjonen med grid*/
+.bodyContainer {
     width: 100%;
     height: auto;
     display: grid;
@@ -61,64 +67,73 @@
     text-align: center;
 }
 
-.bodyContainer div{
+/* Styling for hvert div-element i body-seksjonen */
+.bodyContainer div {
     margin: 20px;
-
 }
 
-img{
+/* Styling for bilder i body-seksjonen */
+img {
     width: 300px;
     height: 150px;
 }
 
+/* Styling for teksten i main klassen*/
 .main {
     width: 500px;
     height: auto;
     font-size: 20px;
     text-align: left;
 }
-.bilde1{
-    display: flex;
-    flex-direction: column;
-    
-}
-.bilde2{
+
+/* Styling for to bilder som ligger i klassen .bilde1 i body-seksjonen med flex*/
+.bilde1 {
     display: flex;
     flex-direction: column;
 }
 
+/* Styling for to bilde som ligger i klassen .bilde2 i body-seksjonen med flex*/
+.bilde2 {
+    display: flex;
+    flex-direction: column;
+}
 
- 
+/* Styling for mobilview*/
 @media only screen and (max-width: 430px) {
-    *{
+    
+    /* Oppdatering av overflow for mindre skjermer */
+    * {
         overflow-y: visible;
     }
     
-    .container{
+    /* Oppdatering av hovedcontaineren for mindre skjermer */
+    .container {
         width: 100%;
         padding-top: 2rem;
     }
     
-    .jobb-header #work{
+    /* Styling for lenken "Work" i header-seksjonen for mindre skjermer */
+    .jobb-header #work {
         color: yellow;
-    
     }
     
-    .jobb-header .Linklist{
+    /* Styling for lenkelisten i header-seksjonen for mindre skjermer med flex */
+    .jobb-header .Linklist {
         display: flex;
         list-style: none;
         align-items: center; 
         justify-content: center;
     }
     
-    .Linklist li a{
+    /* Styling for lenkene i lenkelisten for mindre skjermer */
+    .Linklist li a {
         text-decoration: none;
         color: #fff;
         font-size: 13px;
     }
     
-    
-    .bodyContainer{
+    /* Oppdatering av body-container for mindre skjermer med grid*/
+    .bodyContainer {
         width: 100%;
         height: auto;
         display: grid;
@@ -133,13 +148,14 @@ img{
         color: white;
         text-align: center;
     }
-
     
-    img{
+    /* Styling for bilder for mindre skjermer */
+    img {
         width: 300px;
         height: 150px;
     }
     
+    /* Styling for hovedseksjonen for mindre skjermer */
     .main {
         grid-area: main;
         width: 400px;
@@ -148,24 +164,17 @@ img{
         text-align: center;
         padding-top: 30px;
     }
+    /* Styling for bilde1 klassen for mindre skjermer */
     .bilde1{
         grid-area: bilde1;
         display: flex;
         flex-direction: column;
         
     }
+    /* Styling for bilde2 klassen for mindre skjermer */
     .bilde2{
         grid-area: bilde2;
         display: flex;
         flex-direction: column;
     }
 }
-
-
-
-
-
-
-
-
-

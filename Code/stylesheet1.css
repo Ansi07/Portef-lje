@@ -1,76 +1,81 @@
-*{
+/* Nullstiller margin, padding og skjuler overflow for alle elementer på siden */
+* {
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-.container{
+/* Styling for hovedcontaineren med grid*/
+.container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    "header header header"
-    "main sidebar sidebar"
-    "main sidebar sidebar";
+        "header header header"
+        "main sidebar sidebar"
+        "main sidebar sidebar";
     background-color: black;
     padding: 2rem; 
 }
 
-.index-header{
+/* Styling for header-seksjonen på startsiden */
+.index-header {
     grid-area: header; 
 }
 
-.index-header .Linklist{
+/* Styling for lenkelisten i header-seksjonen med flex */
+.index-header .Linklist {
     display: flex;
     list-style: none;
     align-items: center; 
     justify-content: space-around;
 }
 
-
-.index-header .Linklist li{
+/* Styling for hvert element i lenkelisten i header-seksjonen med flex */
+.index-header .Linklist li {
     display: flex;
     margin-left: 20px; 
     margin-right: 20px;   
-          
 }
 
-.Linklist li a{
+/* Styling for lenkene i lenkelisten */
+.Linklist li a {
     text-decoration: none;
     color: #fff;
     font-size: 18px;
 }
 
-.index-header #logoLink #logo{     
+/* Styling for logoet i header-seksjonen med flex*/
+.index-header #logoLink #logo {     
     display: flex;
     width: 6rem;
     height: auto;
     position: relative;        
-
 }
 
-.main{
+/* Styling for hovedseksjonen */
+.main {
     grid-area: main;
-}
-
-.main{
     color: #fff;
     font-size: 20px;
     padding: 3rem 2rem 1rem;
     padding-top: 5rem;
     padding-left: 3rem;
 }
-.main h5{
+
+/* Styling for h5 teksten i hovedseksjonen med flex */
+.main h5 {
     display: flex;
     padding-top: 5rem;
 }
 
-.sidebar{
+/* Styling for sidebar-seksjonen */
+.sidebar {
     grid-area: sidebar;        
 }
 
-
-.sidebar #bilde{
+/* Styling for bilde i sidebar-seksjonen med flex*/
+.sidebar #bilde {
     display: flex;
     margin-left: auto;
     align-items: center;
@@ -78,46 +83,36 @@
     height: auto;
 }
 
-
-
-
-
+/* styling for mobilview*/
 @media only screen and (max-width: 430px) {
-    *{
+    /* Bakgrunnsfarge for alle elementer på siden */
+    * {
         background-color: black;
-
     }
 
-.container{     
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "header"
-    "main"
-    "sidebar";
+    /* Oppdatering av grid for mindre skjermer */
+    .container {     
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "header"
+            "main"
+            "sidebar";
     }
 
-
-.index-header{
-    grid-area: header;
+    /* Justering av header-seksjonen for mindre skjermer */
+    .index-header {
+        grid-area: header;
     }
 
-.index-header .Linklist{
-    display: flex;
-    justify-content:center;
+    /* Justering av lenkelisten i header-seksjonen for mindre skjermer */
+    .index-header .Linklist {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Justering av fontstørrelse for lenkene på mindre skjermer */
+    .index-header .Linklist a {
+        font-size: 13px;
+    }
 }
-.index-header .Linklist a{
-    font-size: 13px;
-}
-}
-
-
-
-
-
-
-
-
-
-
-

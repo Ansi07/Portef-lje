@@ -1,59 +1,65 @@
-*{
+/* Nullstiller margin, padding og skjuler overflow for alle elementer på siden med en bakgrunnsfarge */
+* {
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #403F3F;
 }
 
-.container{
+/* Styling for hovedcontaineren med grid */
+.container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    "header header header"
-    "main main main"
-    "main main main";
+        "header header header"
+        "main main main"
+        "main main main";
     padding: 2rem; 
 }
 
-.kontakt-header{
+/* Styling for header-seksjonen på "kontakt"-siden */
+.kontakt-header {
     grid-area: header; 
 }
 
-.kontakt-header #contact{
+/* Styling for lenken "Contact" i header-seksjonen */
+.kontakt-header #contact {
     color: yellow;
 }
 
-.kontakt-header .Linklist{
+/* Styling for lenkelisten i header-seksjonen med flex*/
+.kontakt-header .Linklist {
     display: flex;
     list-style: none;
     align-items: center; 
     justify-content: space-around;
 }
 
-
-.kontakt-header .Linklist li{
+/* Styling for hvert element i lenkelisten i header-seksjonen med flex*/
+.kontakt-header .Linklist li {
     display: flex;
     margin-left: 20px; 
     margin-right: 20px;   
-          
 }
 
-.Linklist li a{
+/* Styling for lenkene i lenkelisten */
+.Linklist li a {
     text-decoration: none;
     color: #fff;
     font-size: 18px;
 }
 
-.kontakt-header #logoLink #logo{     
+/* Styling for logoet i header-seksjonen med flex */
+.kontakt-header #logoLink #logo {     
     display: flex;
     width: 6rem;
     height: auto;
     position: relative;        
-
 }
 
-.main{
+/* Styling for hovedseksjonen */
+.main {
     grid-area: main;
     color: #fff;
     font-size: 23px;
@@ -61,60 +67,50 @@
     grid-gap: 80px;
 }
 
-.main h3{
+/* Styling for overskrift i hovedseksjonen med flex*/
+.main h3 {
     display: flex;
     justify-content: center;
     padding-top: 4rem;
 }
 
-.main h4{
+/* Styling for h4 teksten i hovedseksjonen med flex*/
+.main h4 {
     display: flex;
     justify-content: center;
 }
 
-
+/* Styling for mobilview */
 @media only screen and (max-width: 430px) {
-
-.container{     
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "header"
-    "main";
+    
+    /* Oppdatering av grid for mindre skjermer */
+    .container {     
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "header"
+            "main";
     }
 
+    /* Justering av header-seksjonen for mindre skjermer */
+    .kontakt-header {
+        grid-area: header;
+    }
 
-.kontakt-header{
-    grid-area: header;
+    /* Justering av lenkelisten i header-seksjonen for mindre skjermer */
+    .kontakt-header .Linklist {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Justering av fontstørrelse for lenkene på mindre skjermer */
+    .kontakt-header .Linklist a {
+        font-size: 13px;
+    }
+
+    /* Justering av fontstørrelse og padding for overskriften på mindre skjermer */
+    h3 {
+        font-size: 35px; 
+        padding-left: 25px;
+    }
 }
-
-.kontakt-header .Linklist{
-    display: flex;
-    justify-content:center;
-}
-.kontakt-header .Linklist a{
-    font-size: 13px;
-}
-
-.main{
-    grid-area: main;
-    display: grid;
-    grid-gap: 50px;
-}
-
-h3{
-    font-size: 35px; 
-    padding-left: 25px;
-}
-
-}
-
-
-
-
-
-
-
-
-
-
